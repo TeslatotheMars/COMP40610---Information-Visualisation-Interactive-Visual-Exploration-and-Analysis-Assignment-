@@ -1,0 +1,199 @@
+Year,activity,total_tonnes,hazardous_tonnes,non_hazardous_tonnes,hazardous_share_pct
+2004,"Agriculture, forestry and fishing (A)",8706.0,0.0,8706.0,0.0
+2004,All NACE activities plus households (TOTAL_HH),24499142.0,724345.0,23774797.0,2.956613745901795
+2004,Construction (F),11286882.0,0.0,11286882.0,0.0
+2004,"Electricity, gas, steam and air conditioning supply  (D)",286494.0,1726.0,284768.0,0.6024558978547544
+2004,Households (EP_HH),1702345.0,149.0,1702196.0,0.00875263239825065
+2004,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1150689.0,18975.0,1131714.0,1.6490120267074768
+2004,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",340255.0,186975.0,153280.0,54.951433483710744
+2004,Manufacture of coke and refined petroleum products (C19),0.0,0.0,0.0,
+2004,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",140812.0,27586.0,113226.0,19.590659886941452
+2004,Manufacture of food products; beverages and tobacco products (C10-C12),2998500.0,928.0,2997572.0,0.030948807737201933
+2004,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",51174.0,1356.0,49818.0,2.6497830929769024
+2004,Manufacture of other non-metallic mineral products (C23),130520.0,13389.0,117131.0,10.258197977321483
+2004,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),217064.0,5608.0,211456.0,2.583569822725095
+2004,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",66371.0,1063.0,65308.0,1.6016031097919274
+2004,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",260924.0,1228.0,259696.0,0.4706351274700679
+2004,Manufacturing (C),5356309.0,257108.0,5099201.0,4.800096484351444
+2004,Mining and quarrying (B),4049344.0,1078.0,4048266.0,0.026621595991844604
+2004,Services (except wholesale of waste and scrap)  (G-U_X_G4677),1183713.0,21034.0,1162679.0,1.7769510007915772
+2004,"Waste collection, treatment and disposal activities; materials recovery (E38)",139801.0,0.0,139801.0,0.0
+2004,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",42298.0,,42298.0,
+2004,"Water supply; sewerage, waste management and remediation activities (E)",,,,
+2004,Wholesale of waste and scrap (G4677),0.0,0.0,0.0,
+2006,"Agriculture, forestry and fishing (A)",0.0,0.0,0.0,
+2006,All NACE activities plus households (TOTAL_HH),29599175.0,708791.0,28890384.0,2.3946309314364336
+2006,Construction (F),16599466.0,77182.0,16522284.0,0.4649667645935116
+2006,"Electricity, gas, steam and air conditioning supply  (D)",346767.0,13426.0,333341.0,3.8717640375237554
+2006,Households (EP_HH),1978711.0,,1978711.0,
+2006,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1261771.0,19302.0,1242469.0,1.5297546068185115
+2006,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",368109.0,170045.0,198064.0,46.19419791420476
+2006,Manufacture of coke and refined petroleum products (C19),0.0,0.0,0.0,
+2006,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",144267.0,15057.0,129210.0,10.436898251159308
+2006,Manufacture of food products; beverages and tobacco products (C10-C12),1740437.0,2482.0,1737955.0,0.14260786227826688
+2006,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",25910.0,1687.0,24223.0,6.510999614048629
+2006,Manufacture of other non-metallic mineral products (C23),105372.0,21156.0,84216.0,20.07743992711536
+2006,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),163360.0,17152.0,146208.0,10.49951028403526
+2006,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",11890.0,1343.0,10547.0,11.295206055508832
+2006,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",246239.0,420.0,245819.0,0.17056599482616483
+2006,Manufacturing (C),4067355.0,248644.0,3818711.0,6.113161993482251
+2006,Mining and quarrying (B),4765557.0,9929.0,4755628.0,0.2083492024122259
+2006,Services (except wholesale of waste and scrap)  (G-U_X_G4677),1327064.0,,1327064.0,
+2006,"Waste collection, treatment and disposal activities; materials recovery (E38)",78822.0,,78822.0,
+2006,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",75823.0,,75823.0,
+2006,"Water supply; sewerage, waste management and remediation activities (E)",,,,
+2006,Wholesale of waste and scrap (G4677),,,,
+2008,"Agriculture, forestry and fishing (A)",19376.0,,19376.0,
+2008,All NACE activities plus households (TOTAL_HH),22502816.0,743418.0,22996564.0,3.3036665277803454
+2008,Construction (F),13547588.0,25981.0,13521607.0,0.1917758349309117
+2008,"Electricity, gas, steam and air conditioning supply  (D)",291726.0,1755.0,289971.0,0.601591904732523
+2008,Households (EP_HH),1677338.0,,1677338.0,
+2008,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1337270.0,33367.0,1303903.0,2.49515804586957
+2008,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",267325.0,159764.0,107561.0,59.76395772935565
+2008,Manufacture of coke and refined petroleum products (C19),0.0,0.0,0.0,
+2008,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",0.0,0.0,0.0,
+2008,Manufacture of food products; beverages and tobacco products (C10-C12),1595697.0,2657.0,1593040.0,0.16651030866135613
+2008,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",163627.0,22516.0,141110.0,13.760565187896864
+2008,Manufacture of other non-metallic mineral products (C23),231276.0,23940.0,207336.0,10.351268614123384
+2008,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),415932.0,2582.0,413351.0,0.6207745496860063
+2008,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",14497.0,47.0,14450.0,0.3242050079326757
+2008,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",0.0,0.0,0.0,
+2008,Manufacturing (C),4025624.0,244873.0,3780751.0,6.082858210304788
+2008,Mining and quarrying (B),2061293.0,3683.0,2057610.0,0.17867425931199493
+2008,Services (except wholesale of waste and scrap)  (G-U_X_G4677),1477397.0,0.0,1477397.0,0.0
+2008,"Waste collection, treatment and disposal activities; materials recovery (E38)",,,,
+2008,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",172513.0,0.0,172513.0,0.0
+2008,"Water supply; sewerage, waste management and remediation activities (E)",,,,
+2008,Wholesale of waste and scrap (G4677),,,,
+2010,"Agriculture, forestry and fishing (A)",101143.0,34446.0,66697.0,34.05673155828876
+2010,All NACE activities plus households (TOTAL_HH),19807586.0,1972204.0,17835382.0,9.956811496363061
+2010,Construction (F),1609762.0,8123.0,1601639.0,0.5046087558285013
+2010,"Electricity, gas, steam and air conditioning supply  (D)",333651.0,5972.0,327679.0,1.7898942307980497
+2010,Households (EP_HH),1730028.0,57618.0,1672410.0,3.330466327712615
+2010,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1383092.0,92054.0,1291038.0,6.655667157354681
+2010,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",306317.0,189342.0,116975.0,61.812436136420764
+2010,Manufacture of coke and refined petroleum products (C19),1972.0,698.0,1274.0,35.39553752535497
+2010,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",88786.0,17756.0,71030.0,19.998648435564164
+2010,Manufacture of food products; beverages and tobacco products (C10-C12),881836.0,1381.0,880455.0,0.15660508303131196
+2010,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",111377.0,25430.0,85947.0,22.832362157357444
+2010,Manufacture of other non-metallic mineral products (C23),102624.0,8932.0,93692.0,8.70361708762083
+2010,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),67630.0,1427.0,66203.0,2.110010350436197
+2010,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",28335.0,145.0,28190.0,0.5117346038468326
+2010,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",287120.0,769.0,286351.0,0.2678322652549457
+2010,Manufacturing (C),3259089.0,337934.0,2921155.0,10.36897120637086
+2010,Mining and quarrying (B),2195671.0,3292.0,2192379.0,0.14993138771701225
+2010,Services (except wholesale of waste and scrap)  (G-U_X_G4677),140689.0,193.0,140496.0,0.13718201138681774
+2010,"Waste collection, treatment and disposal activities; materials recovery (E38)",2984119.0,602896.0,2381223.0,20.203483842299853
+2010,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",419635.0,1361.0,418274.0,0.32432947680722535
+2010,"Water supply; sewerage, waste management and remediation activities (E)",3403754.0,604257.0,2799497.0,17.75266367663468
+2010,Wholesale of waste and scrap (G4677),7033799.0,920369.0,6113430.0,13.084948830639034
+2012,"Agriculture, forestry and fishing (A)",96251.0,23198.0,73053.0,24.10156777591921
+2012,All NACE activities plus households (TOTAL_HH),12713021.0,478706.0,12234315.0,3.7654779300687067
+2012,Construction (F),1132275.0,1755.0,1130520.0,0.15499768165860767
+2012,"Electricity, gas, steam and air conditioning supply  (D)",374849.0,804.0,374045.0,0.21448636651024813
+2012,Households (EP_HH),1656670.0,54070.0,1602600.0,3.2637761292230802
+2012,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1405990.0,41392.0,1364598.0,2.94397541945533
+2012,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",275047.0,152085.0,122962.0,55.294186084560096
+2012,Manufacture of coke and refined petroleum products (C19),1677.0,118.0,1559.0,7.036374478234943
+2012,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",174741.0,10590.0,164151.0,6.060397960409978
+2012,Manufacture of food products; beverages and tobacco products (C10-C12),1712121.0,3233.0,1708888.0,0.18883011189045634
+2012,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",74583.0,29538.0,45045.0,39.60419934837698
+2012,Manufacture of other non-metallic mineral products (C23),51061.0,2090.0,48971.0,4.09314349503535
+2012,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),153801.0,292.0,153509.0,0.18985572265459913
+2012,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",20565.0,91.0,20474.0,0.4424993921711646
+2012,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",119022.0,1357.0,117665.0,1.140125354976391
+2012,Manufacturing (C),3988608.0,240786.0,3747822.0,6.036842928660826
+2012,Mining and quarrying (B),2084654.0,1279.0,2083375.0,0.06135310703838622
+2012,Services (except wholesale of waste and scrap)  (G-U_X_G4677),1441897.0,146480.0,1295417.0,10.158839362312287
+2012,"Waste collection, treatment and disposal activities; materials recovery (E38)",1718694.0,10321.0,1708373.0,0.6005141112961353
+2012,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",218831.0,9.0,218822.0,0.004112762816968345
+2012,"Water supply; sewerage, waste management and remediation activities (E)",1937525.0,10330.0,1927195.0,0.5331544109108269
+2012,Wholesale of waste and scrap (G4677),292.0,4.0,288.0,1.36986301369863
+2014,"Agriculture, forestry and fishing (A)",96251.0,23198.0,73053.0,24.10156777591921
+2014,All NACE activities plus households (TOTAL_HH),15166830.0,482907.0,14683923.0,3.183967908917025
+2014,Construction (F),1884390.0,4060.0,1880330.0,0.21545433800858635
+2014,"Electricity, gas, steam and air conditioning supply  (D)",321019.0,1934.0,319085.0,0.6024565524159006
+2014,Households (EP_HH),1524356.0,68687.0,1455669.0,4.505968422074633
+2014,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1554555.0,38234.0,1516321.0,2.4594819739410956
+2014,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",417031.0,150806.0,266225.0,36.16182010450063
+2014,Manufacture of coke and refined petroleum products (C19),1065.0,240.0,825.0,22.535211267605636
+2014,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",175017.0,11027.0,163990.0,6.300530805578887
+2014,Manufacture of food products; beverages and tobacco products (C10-C12),770031.0,4782.0,765249.0,0.6210139591782669
+2014,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",87502.0,17516.0,69986.0,20.017828163927682
+2014,Manufacture of other non-metallic mineral products (C23),248621.0,3786.0,244835.0,1.5227997634954409
+2014,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),49483.0,1898.0,47585.0,3.835660731968555
+2014,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",6167.0,85.0,6082.0,1.378303875466191
+2014,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",158580.0,1692.0,156888.0,1.0669693530079456
+2014,Manufacturing (C),3468052.0,230066.0,3237986.0,6.633868234963028
+2014,Mining and quarrying (B),2706594.0,20495.0,2686099.0,0.7572247629308274
+2014,Services (except wholesale of waste and scrap)  (G-U_X_G4677),2125846.0,103048.0,2022798.0,4.8473878164269655
+2014,"Waste collection, treatment and disposal activities; materials recovery (E38)",2559694.0,25849.0,2533845.0,1.0098472708065886
+2014,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",474143.0,5449.0,468694.0,1.1492313500357487
+2014,"Water supply; sewerage, waste management and remediation activities (E)",3033837.0,31298.0,3002539.0,1.031630901726098
+2014,Wholesale of waste and scrap (G4677),6485.0,121.0,6364.0,1.8658442559753277
+2016,"Agriculture, forestry and fishing (A)",105033.0,24911.0,80122.0,23.717307893709595
+2016,All NACE activities plus households (TOTAL_HH),15251689.0,533987.0,14717702.0,3.5011663298405833
+2016,Construction (F),1521590.0,42254.0,1479336.0,2.776963571001387
+2016,"Electricity, gas, steam and air conditioning supply  (D)",316937.0,1838.0,315099.0,0.5799259789800497
+2016,Households (EP_HH),1513544.0,33194.0,1480350.0,2.193130824079115
+2016,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1618667.0,41281.0,1577386.0,2.5503083710238115
+2016,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",223085.0,120588.0,102497.0,54.05473250106462
+2016,Manufacture of coke and refined petroleum products (C19),567.0,53.0,514.0,9.347442680776014
+2016,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",321552.0,53847.0,267705.0,16.745969547693683
+2016,Manufacture of food products; beverages and tobacco products (C10-C12),1318618.0,2445.0,1316173.0,0.18542140331771598
+2016,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",174610.0,18501.0,156109.0,10.595613080579577
+2016,Manufacture of other non-metallic mineral products (C23),1390485.0,84763.0,1305722.0,6.09593055660435
+2016,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),98636.0,1203.0,97433.0,1.2196358327588304
+2016,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",15881.0,191.0,15690.0,1.2026950443926705
+2016,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",123149.0,3796.0,119353.0,3.082444843238678
+2016,Manufacturing (C),5285250.0,326668.0,4958582.0,6.180748308973086
+2016,Mining and quarrying (B),2398489.0,1970.0,2396519.0,0.08213504418823685
+2016,Services (except wholesale of waste and scrap)  (G-U_X_G4677),2027102.0,90312.0,1936790.0,4.455227215996038
+2016,"Waste collection, treatment and disposal activities; materials recovery (E38)",1966150.0,11891.0,1954259.0,0.60478600310251
+2016,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",117075.0,878.0,116197.0,0.7499466154174674
+2016,"Water supply; sewerage, waste management and remediation activities (E)",2083225.0,12769.0,2070456.0,0.6129438730814002
+2016,Wholesale of waste and scrap (G4677),519.0,71.0,448.0,13.680154142581888
+2018,"Agriculture, forestry and fishing (A)",296865.0,25443.0,271422.0,8.570562376837957
+2018,All NACE activities plus households (TOTAL_HH),13986757.0,630526.0,13356231.0,4.508021409108631
+2018,Construction (F),1903058.0,14655.0,1888403.0,0.7700763718184102
+2018,"Electricity, gas, steam and air conditioning supply  (D)",149768.0,1690.0,148078.0,1.1284119438064204
+2018,Households (EP_HH),1591220.0,80325.0,1510895.0,5.048013473938236
+2018,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1582103.0,40060.0,1542043.0,2.532072817003697
+2018,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",232485.0,151612.0,80873.0,65.21366969912037
+2018,Manufacture of coke and refined petroleum products (C19),3644.0,3124.0,520.0,85.72996706915478
+2018,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",141509.0,46275.0,95234.0,32.7011002833742
+2018,Manufacture of food products; beverages and tobacco products (C10-C12),824036.0,5785.0,818251.0,0.70203243547612
+2018,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",115172.0,25149.0,90023.0,21.836036536658217
+2018,Manufacture of other non-metallic mineral products (C23),381681.0,3815.0,377866.0,0.9995257820012
+2018,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),86362.0,255.0,86107.0,0.29526875246057294
+2018,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",16254.0,90.0,16164.0,0.5537098560354374
+2018,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",64728.0,1489.0,63239.0,2.300395501174144
+2018,Manufacturing (C),3447974.0,277654.0,3170320.0,8.052670930813283
+2018,Mining and quarrying (B),1981596.0,1097.0,1980499.0,0.055359417358533225
+2018,Services (except wholesale of waste and scrap)  (G-U_X_G4677),3121660.0,118550.0,3003110.0,3.7976589378727983
+2018,"Waste collection, treatment and disposal activities; materials recovery (E38)",1201893.0,108675.0,1093218.0,9.041986266664336
+2018,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",291663.0,2214.0,289449.0,0.7590952571975191
+2018,"Water supply; sewerage, waste management and remediation activities (E)",1493556.0,110889.0,1382667.0,7.424495633240401
+2018,Wholesale of waste and scrap (G4677),1060.0,223.0,837.0,21.037735849056606
+2020,"Agriculture, forestry and fishing (A)",275414.0,25836.0,249578.0,9.380786742867102
+2020,All NACE activities plus households (TOTAL_HH),16192033.0,886987.0,15305046.0,5.477922383186843
+2020,Construction (F),5278255.0,19193.0,5259062.0,0.3636239628437808
+2020,"Electricity, gas, steam and air conditioning supply  (D)",158094.0,38022.0,120072.0,24.05024858628411
+2020,Households (EP_HH),1941741.0,112323.0,1829418.0,5.7846540810540645
+2020,"Manufacture of basic metals and fabricated metal products, except machinery and equipment  (C24_C25)",1707995.0,44972.0,1663023.0,2.6330287852130714
+2020,"Manufacture of chemical, pharmaceutical, rubber and plastic products (C20-C22)",401008.0,186329.0,214679.0,46.46515780233811
+2020,Manufacture of coke and refined petroleum products (C19),4082.0,3000.0,1082.0,73.49338559529642
+2020,"Manufacture of computer, electronic and optical products, electrical equipment, motor vehicles and other transport equipment (C26-C30)",150899.0,82789.0,68110.0,54.863849329684086
+2020,Manufacture of food products; beverages and tobacco products (C10-C12),746557.0,5393.0,741164.0,0.7223828857006229
+2020,"Manufacture of furniture; jewellery, musical instruments, toys; repair and installation of machinery and equipment (C31-C33)",156561.0,26781.0,129780.0,17.105792630348553
+2020,Manufacture of other non-metallic mineral products (C23),344814.0,2847.0,341967.0,0.8256625311037256
+2020,Manufacture of paper and paper products; printing and reproduction of recorded media (C17_C18),46624.0,410.0,46214.0,0.879375428963624
+2020,"Manufacture of textiles, wearing apparel, leather and related products  (C13-C15)",11133.0,357.0,10776.0,3.2066828348154135
+2020,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials (C16)",51397.0,7081.0,44316.0,13.777068700507812
+2020,Manufacturing (C),3621070.0,359959.0,3261111.0,9.94068051708473
+2020,Mining and quarrying (B),1517599.0,818.0,1516781.0,0.05390093166903774
+2020,Services (except wholesale of waste and scrap)  (G-U_X_G4677),1360187.0,110873.0,1249314.0,8.151305666059153
+2020,"Waste collection, treatment and disposal activities; materials recovery (E38)",1806869.0,209422.0,1597447.0,11.590325585308065
+2020,"Water collection, treatment and supply; sewerage; remediation activities and other waste management services(E36_E37_E39)",231047.0,10064.0,220983.0,4.355823706864837
+2020,"Water supply; sewerage, waste management and remediation activities (E)",2037916.0,219486.0,1818430.0,10.770120063829912
+2020,Wholesale of waste and scrap (G4677),1757.0,477.0,1280.0,27.148548662492882
