@@ -1,0 +1,833 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "white",
+  "title": {
+    "text": "Waste Generation & Treatment in Ireland",
+    "subtitle": [
+      "CSO GWA01 and GWA02 | 2004–2020",
+      "Click to add/remove categories; compare up to three series; double-click to reset"
+    ],
+    "anchor": "start",
+    "fontSize": 22,
+    "subtitleFontSize": 12,
+    "offset": 20
+  },
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2020,
+      "bind": {
+        "input": "select",
+        "name": "Year: ",
+        "options": [
+          2004,
+          2006,
+          2008,
+          2010,
+          2012,
+          2014,
+          2016,
+          2018,
+          2020
+        ]
+      }
+    },
+    {
+      "name": "selectedHazardousness",
+      "value": "Total",
+      "bind": {
+        "input": "select",
+        "name": "Waste type: ",
+        "options": [
+          "Total",
+          "Hazardous",
+          "Non-hazardous"
+        ]
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "title": {
+        "text": "1. Waste Generation by Economic Sector",
+        "anchor": "start",
+        "fontSize": 17
+      },
+      "data": {
+        "url": "https://gist.githubusercontent.com/TeslatotheMars/9dfbc2fff7b60d5cc35a34e53b312f56/raw/GWA01_total_waste_by_activity.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Year": "number",
+            "total_tonnes": "number",
+            "hazardous_tonnes": "number",
+            "non_hazardous_tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "activity",
+            "oneOf": [
+              "Agriculture, forestry and fishing (A)",
+              "Mining and quarrying (B)",
+              "Manufacturing (C)",
+              "Electricity, gas, steam and air conditioning supply  (D)",
+              "Water supply; sewerage, waste management and remediation activities (E)",
+              "Construction (F)",
+              "Services (except wholesale of waste and scrap)  (G-U_X_G4677)",
+              "Wholesale of waste and scrap (G4677)",
+              "Households (EP_HH)"
+            ]
+          }
+        },
+        {
+          "calculate": "datum.activity === 'Agriculture, forestry and fishing (A)' ? 'Agriculture' : datum.activity === 'Mining and quarrying (B)' ? 'Mining & Quarrying' : datum.activity === 'Manufacturing (C)' ? 'Manufacturing' : datum.activity === 'Electricity, gas, steam and air conditioning supply  (D)' ? 'Energy Supply' : datum.activity === 'Water supply; sewerage, waste management and remediation activities (E)' ? 'Water & Waste Management' : datum.activity === 'Construction (F)' ? 'Construction' : datum.activity === 'Services (except wholesale of waste and scrap)  (G-U_X_G4677)' ? 'Services' : datum.activity === 'Wholesale of waste and scrap (G4677)' ? 'Waste & Scrap Wholesale' : 'Households'",
+          "as": "Sector"
+        },
+        {
+          "calculate": "selectedHazardousness === 'Total' ? datum.total_tonnes : selectedHazardousness === 'Hazardous' ? datum.hazardous_tonnes : datum.non_hazardous_tonnes",
+          "as": "selected_tonnes"
+        },
+        {
+          "calculate": "datum.selected_tonnes / 1000000",
+          "as": "million_tonnes"
+        },
+        {
+          "filter": "isValid(datum.selected_tonnes) && isFinite(datum.selected_tonnes)"
+        }
+      ],
+      "hconcat": [
+        {
+          "title": {
+            "text": "Sector Ranking",
+            "subtitle": "Click to compare up to three sectors",
+            "anchor": "start"
+          },
+          "width": 380,
+          "height": {
+            "step": 42
+          },
+          "params": [
+            {
+              "name": "sectorPick",
+              "select": {
+                "type": "point",
+                "fields": [
+                  "Sector"
+                ],
+                "on": "click",
+                "clear": "dblclick",
+                "toggle": "true"
+              }
+            }
+          ],
+          "transform": [
+            {
+              "filter": "datum.Year === selectedYear"
+            },
+            {
+              "window": [
+                {
+                  "op": "row_number",
+                  "as": "rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "selected_tonnes",
+                  "order": "descending"
+                }
+              ]
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": 4,
+            "height": {
+              "band": 0.68
+            },
+            "cursor": "pointer"
+          },
+          "encoding": {
+            "y": {
+              "field": "Sector",
+              "type": "nominal",
+              "sort": {
+                "field": "rank",
+                "op": "min",
+                "order": "ascending"
+              },
+              "axis": {
+                "title": null,
+                "labelFontSize": 11,
+                "labelLimit": 175,
+                "ticks": false,
+                "domain": false
+              }
+            },
+            "x": {
+              "field": "million_tonnes",
+              "type": "quantitative",
+              "axis": {
+                "title": "Waste generated (million tonnes)",
+                "grid": true,
+                "format": ".1f"
+              },
+              "scale": {
+                "zero": true
+              }
+            },
+            "color": {
+              "field": "Sector",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  "Agriculture",
+                  "Mining & Quarrying",
+                  "Manufacturing",
+                  "Energy Supply",
+                  "Water & Waste Management",
+                  "Construction",
+                  "Services",
+                  "Waste & Scrap Wholesale",
+                  "Households"
+                ],
+                "range": [
+                  "#2E86AB",
+                  "#A23B72",
+                  "#F18F01",
+                  "#6A994E",
+                  "#7B6DAD",
+                  "#D1495B",
+                  "#008B8B",
+                  "#B08448",
+                  "#607D8B"
+                ]
+              },
+              "legend": null
+            },
+            "opacity": {
+              "condition": {
+                "param": "sectorPick",
+                "value": 1,
+                "empty": true
+              },
+              "value": 0.45
+            },
+            "stroke": {
+              "condition": {
+                "param": "sectorPick",
+                "value": "#1e3a8a",
+                "empty": false
+              },
+              "value": "transparent"
+            },
+            "strokeWidth": {
+              "condition": {
+                "param": "sectorPick",
+                "value": 2,
+                "empty": false
+              },
+              "value": 0
+            },
+            "tooltip": [
+              {
+                "field": "Year",
+                "type": "ordinal",
+                "title": "Year"
+              },
+              {
+                "field": "Sector",
+                "type": "nominal",
+                "title": "Sector"
+              },
+              {
+                "field": "rank",
+                "type": "quantitative",
+                "title": "Rank"
+              },
+              {
+                "field": "selected_tonnes",
+                "type": "quantitative",
+                "title": "Waste (tonnes)",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "text": "Historical Trend",
+            "subtitle": "Select categories on the left; black line = total",
+            "anchor": "start"
+          },
+          "width": 400,
+          "height": 380,
+          "transform": [
+            {
+              "filter": "length(data('sectorPick_store')) === 0 || vlSelectionTest('sectorPick_store', datum)"
+            },
+            {
+              "calculate": "length(data('sectorPick_store')) === 0 ? 'All sectors' : datum.Sector",
+              "as": "Comparison"
+            },
+            {
+              "aggregate": [
+                {
+                  "op": "sum",
+                  "field": "million_tonnes",
+                  "as": "trend_million"
+                }
+              ],
+              "groupby": [
+                "Year",
+                "Comparison"
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "dense_rank",
+                  "as": "series_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "Comparison",
+                  "order": "ascending"
+                }
+              ],
+              "ignorePeers": false
+            },
+            {
+              "filter": "datum.series_rank <= 3"
+            }
+          ],
+          "mark": {
+            "type": "line",
+            "strokeWidth": 3,
+            "point": {
+              "filled": true,
+              "size": 65
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "Year",
+              "type": "ordinal",
+              "sort": "ascending",
+              "axis": {
+                "title": "Year",
+                "labelAngle": -45
+              }
+            },
+            "y": {
+              "field": "trend_million",
+              "type": "quantitative",
+              "axis": {
+                "title": "Waste generated (million tonnes)",
+                "grid": true,
+                "format": ".2f"
+              },
+              "scale": {
+                "zero": true,
+                "nice": true
+              }
+            },
+            "tooltip": [
+              {
+                "field": "Comparison",
+                "type": "nominal",
+                "title": "Category"
+              },
+              {
+                "field": "Year",
+                "type": "ordinal",
+                "title": "Year"
+              },
+              {
+                "field": "trend_million",
+                "type": "quantitative",
+                "title": "Waste (million tonnes)",
+                "format": ".3f"
+              }
+            ],
+            "color": {
+              "field": "Comparison",
+              "type": "nominal",
+              "legend": {
+                "title": "Compared categories",
+                "orient": "bottom",
+                "columns": 2,
+                "labelLimit": 220,
+                "symbolStrokeWidth": 3
+              },
+              "scale": {
+                "domain": [
+                  "All sectors",
+                  "Agriculture",
+                  "Mining & Quarrying",
+                  "Manufacturing",
+                  "Energy Supply",
+                  "Water & Waste Management",
+                  "Construction",
+                  "Services",
+                  "Waste & Scrap Wholesale",
+                  "Households"
+                ],
+                "range": [
+                  "#111111",
+                  "#2E86AB",
+                  "#A23B72",
+                  "#F18F01",
+                  "#6A994E",
+                  "#7B6DAD",
+                  "#D1495B",
+                  "#008B8B",
+                  "#B08448",
+                  "#607D8B"
+                ]
+              }
+            },
+            "detail": {
+              "field": "Comparison",
+              "type": "nominal"
+            }
+          }
+        }
+      ],
+      "resolve": {
+        "scale": {
+          "x": "independent",
+          "y": "independent",
+          "color": "independent"
+        }
+      }
+    },
+    {
+      "title": {
+        "text": "2. Waste Treatment by Method",
+        "anchor": "start",
+        "fontSize": 17
+      },
+      "data": {
+        "url": "https://gist.githubusercontent.com/TeslatotheMars/e9dabec619f0c290da18b117ec518268/raw/GWA02_treatment_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Year": "number",
+            "total_treated_tonnes": "number",
+            "disposal_landfill_other_tonnes": "number",
+            "incineration_tonnes": "number",
+            "energy_recovery_tonnes": "number",
+            "recycling_backfilling_tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.Hazardousness === selectedHazardousness"
+        },
+        {
+          "fold": [
+            "disposal_landfill_other_tonnes",
+            "incineration_tonnes",
+            "energy_recovery_tonnes",
+            "recycling_backfilling_tonnes"
+          ],
+          "as": [
+            "OperationKey",
+            "tonnes"
+          ]
+        },
+        {
+          "calculate": "datum.OperationKey === 'disposal_landfill_other_tonnes' ? 'Disposal' : datum.OperationKey === 'incineration_tonnes' ? 'Incineration' : datum.OperationKey === 'energy_recovery_tonnes' ? 'Energy Recovery' : 'Recycling & Backfilling'",
+          "as": "Operation"
+        },
+        {
+          "filter": "isValid(datum.tonnes) && isFinite(datum.tonnes) && datum.tonnes >= 0"
+        },
+        {
+          "calculate": "datum.tonnes / 1000000",
+          "as": "million_tonnes"
+        }
+      ],
+      "hconcat": [
+        {
+          "width": 440,
+          "height": 430,
+          "title": {
+            "text": "Treatment Composition",
+            "subtitle": "Click slices to compare treatment methods",
+            "anchor": "start"
+          },
+          "transform": [
+            {
+              "filter": "datum.Year === selectedYear"
+            },
+            {
+              "joinaggregate": [
+                {
+                  "op": "sum",
+                  "field": "tonnes",
+                  "as": "year_total"
+                }
+              ]
+            },
+            {
+              "calculate": "datum.year_total > 0 ? datum.tonnes / datum.year_total * 100 : 0",
+              "as": "share_pct"
+            },
+            {
+              "calculate": "datum.share_pct >= 7 ? datum.Operation + '\\n' + format(datum.share_pct, '.1f') + '%' : ''",
+              "as": "SliceLabel"
+            }
+          ],
+          "layer": [
+            {
+              "params": [
+                {
+                  "name": "operationPick",
+                  "select": {
+                    "type": "point",
+                    "fields": [
+                      "Operation"
+                    ],
+                    "on": "click",
+                    "clear": "dblclick",
+                    "toggle": "true"
+                  }
+                }
+              ],
+              "mark": {
+                "type": "arc",
+                "innerRadius": 105,
+                "outerRadius": 185,
+                "stroke": "white",
+                "strokeWidth": 2,
+                "cursor": "pointer"
+              },
+              "encoding": {
+                "theta": {
+                  "field": "tonnes",
+                  "type": "quantitative",
+                  "stack": true
+                },
+                "color": {
+                  "field": "Operation",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": [
+                      "Disposal",
+                      "Incineration",
+                      "Energy Recovery",
+                      "Recycling & Backfilling"
+                    ],
+                    "range": [
+                      "#64748b",
+                      "#f59e0b",
+                      "#0d9488",
+                      "#3b82f6"
+                    ]
+                  },
+                  "legend": null
+                },
+                "order": {
+                  "field": "tonnes",
+                  "type": "quantitative",
+                  "sort": "descending"
+                },
+                "opacity": {
+                  "condition": {
+                    "param": "operationPick",
+                    "empty": true,
+                    "value": 1
+                  },
+                  "value": 0.3
+                },
+                "tooltip": [
+                  {
+                    "field": "Operation",
+                    "type": "nominal",
+                    "title": "Treatment method"
+                  },
+                  {
+                    "field": "Year",
+                    "type": "ordinal",
+                    "title": "Year"
+                  },
+                  {
+                    "field": "tonnes",
+                    "type": "quantitative",
+                    "title": "Waste treated (tonnes)",
+                    "format": ",.0f"
+                  },
+                  {
+                    "field": "share_pct",
+                    "type": "quantitative",
+                    "title": "Share (%)",
+                    "format": ".2f"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "radius": 145,
+                "fontSize": 11,
+                "fontWeight": "bold",
+                "color": "white",
+                "align": "center",
+                "baseline": "middle",
+                "lineBreak": "\n"
+              },
+              "encoding": {
+                "theta": {
+                  "field": "tonnes",
+                  "type": "quantitative",
+                  "stack": true
+                },
+                "order": {
+                  "field": "tonnes",
+                  "type": "quantitative",
+                  "sort": "descending"
+                },
+                "text": {
+                  "field": "SliceLabel",
+                  "type": "nominal"
+                }
+              }
+            },
+            {
+              "transform": [
+                {
+                  "aggregate": [
+                    {
+                      "op": "max",
+                      "field": "total_treated_tonnes",
+                      "as": "total_tonnes"
+                    }
+                  ]
+                },
+                {
+                  "calculate": "format(datum.total_tonnes / 1000000, '.2f') + 'M'",
+                  "as": "CenterTotal"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "fontSize": 30,
+                "fontWeight": "bold",
+                "color": "#0f172a",
+                "align": "center",
+                "baseline": "middle",
+                "dy": -15
+              },
+              "encoding": {
+                "x": {
+                  "value": 220
+                },
+                "y": {
+                  "value": 215
+                },
+                "text": {
+                  "field": "CenterTotal",
+                  "type": "nominal"
+                }
+              }
+            },
+            {
+              "data": {
+                "values": [
+                  {
+                    "label": "million tonnes"
+                  }
+                ]
+              },
+              "mark": {
+                "type": "text",
+                "fontSize": 12,
+                "color": "#64748b",
+                "align": "center",
+                "baseline": "middle"
+              },
+              "encoding": {
+                "x": {
+                  "value": 220
+                },
+                "y": {
+                  "value": 233
+                },
+                "text": {
+                  "field": "label",
+                  "type": "nominal"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "width": 450,
+          "height": 430,
+          "title": {
+            "text": "Historical Trend",
+            "subtitle": "Select methods on the left; black line = total",
+            "anchor": "start"
+          },
+          "transform": [
+            {
+              "filter": "length(data('operationPick_store')) === 0 || vlSelectionTest('operationPick_store', datum)"
+            },
+            {
+              "calculate": "length(data('operationPick_store')) === 0 ? 'All methods' : datum.Operation",
+              "as": "Comparison"
+            },
+            {
+              "aggregate": [
+                {
+                  "op": "sum",
+                  "field": "million_tonnes",
+                  "as": "trend_million"
+                }
+              ],
+              "groupby": [
+                "Year",
+                "Comparison"
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "dense_rank",
+                  "as": "series_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "Comparison",
+                  "order": "ascending"
+                }
+              ],
+              "ignorePeers": false
+            },
+            {
+              "filter": "datum.series_rank <= 3"
+            }
+          ],
+          "mark": {
+            "type": "line",
+            "strokeWidth": 3,
+            "point": {
+              "filled": true,
+              "size": 65
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "Year",
+              "type": "ordinal",
+              "sort": "ascending",
+              "axis": {
+                "title": "Year",
+                "labelAngle": -45
+              }
+            },
+            "y": {
+              "field": "trend_million",
+              "type": "quantitative",
+              "scale": {
+                "zero": true,
+                "nice": true
+              },
+              "axis": {
+                "title": "Waste treated (million tonnes)",
+                "format": ".2f",
+                "grid": true
+              }
+            },
+            "tooltip": [
+              {
+                "field": "Comparison",
+                "type": "nominal",
+                "title": "Category"
+              },
+              {
+                "field": "Year",
+                "type": "ordinal",
+                "title": "Year"
+              },
+              {
+                "field": "trend_million",
+                "type": "quantitative",
+                "title": "Waste (million tonnes)",
+                "format": ".3f"
+              }
+            ],
+            "color": {
+              "field": "Comparison",
+              "type": "nominal",
+              "legend": {
+                "title": "Compared categories",
+                "orient": "bottom",
+                "columns": 2,
+                "labelLimit": 220,
+                "symbolStrokeWidth": 3
+              },
+              "scale": {
+                "domain": [
+                  "All methods",
+                  "Disposal",
+                  "Incineration",
+                  "Energy Recovery",
+                  "Recycling & Backfilling"
+                ],
+                "range": [
+                  "#111111",
+                  "#64748b",
+                  "#f59e0b",
+                  "#0d9488",
+                  "#3b82f6"
+                ]
+              }
+            },
+            "detail": {
+              "field": "Comparison",
+              "type": "nominal"
+            }
+          }
+        }
+      ],
+      "resolve": {
+        "scale": {
+          "x": "independent",
+          "y": "independent",
+          "color": "independent"
+        }
+      }
+    }
+  ],
+  "spacing": 65,
+  "resolve": {
+    "scale": {
+      "x": "independent",
+      "y": "independent",
+      "color": "independent"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "concat": {
+      "spacing": 35
+    },
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#e5e7eb"
+    }
+  }
+}
